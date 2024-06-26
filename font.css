@@ -1,0 +1,29 @@
+/* 영어 */
+@font-face {
+    font-family: Nightydemo;
+    src: url(/fonts/nighty/Nightydemo.otf);
+}
+
+/* 한글 */
+@font-face {
+    font-family: NanumBarunGothicUltraLight;
+    src: url(/fonts/나눔바른고딕/NanumBarunGothicUltraLight.ttf);
+}
+@font-face {
+    font-family: HakgyoansimMulgyeolB;
+    src: url(/fonts/학교안심-물결/HakgyoansimMulgyeolB.ttf);
+}
+@font-face {
+    font-family: HakgyoansimMulgyeolR;
+    src: url(/fonts/학교안심-물결/HakgyoansimMulgyeolR.ttf);
+}
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-style: normal;
+}
+
+* {
+    font-family: 'Nightydemo';
+}
+

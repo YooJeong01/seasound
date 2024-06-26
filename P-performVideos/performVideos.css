@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+}
+
+nav {
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    color: #fff;
+    z-index: 3;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.archiveImg {
+    left: 50%;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.archiveVideo {
+    left: 50%;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.archiveContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.archiveLogo {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+    z-index: 2;
+}
+
+.archiveLogo a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero h1{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: 400;
+    font-size: 300px;
+    color:#fff;
+    letter-spacing: -1px;
+    line-height: 80%;
+}
+
+.archive.scroll {
+    position: relative;
+}
+
+.archiveContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+
+    box-shadow: 10px 5px 20px rgba(57, 57, 57, 0.801);
+}
+
+.archiveInfo {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1em;
+    background-color: #000000;
+}
+
+.archiveInfo h3{
+    font-family: "HakgyoansimMulgyeolB";
+    color: #fff;
+    margin-left: 30px;
+    font-size: 40px;
+}
+
+.archiveInfo p{
+    font-family: "S-CoreDream-3Light";
+    color: #fff;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.archiveFooter {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.archiveFooter a{
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+@media screen and (max-width:1200px) {
+    .archiveContent {
+        width: 100%;
+    }
+
+    .scroll > .archiveContent {
+        top: 50%;
+        left: 50%;
+        padding: 5%;
+    }
+}

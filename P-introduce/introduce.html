@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce SEASOUND</title>
+    <link rel="stylesheet" href="/P-introduce/introduce.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="icon" href="/images/icons/favicon/starfish.png">
+</head>
+<body>
+    <nav>
+        <a href="#">Acoustic Band</a>
+        <a href="/index.html">Back</a>
+    </nav>
+
+    <div class="header">
+        <div class="letters">
+            <div>i</div>
+            <div>n</div>
+            <div>t</div>
+            <div>r</div>
+        </div>
+        <div class="letters">
+            <div>o</div>
+            <div>d</div>
+            <div>u</div>
+            <div>c</div>
+            <div>e</div>
+        </div>
+    </div>
+
+    <div class="website-content">
+        <div class="img-holder">
+            <img src="/images/rod-long-YLtf9KqA4h0-unsplash.jpg" alt="">
+        </div>
+        <div class="content-holder">
+            <div class="row">
+                <h1 class="about">About SEASOUND</h1>
+            </div>
+            <div class="row row1">
+                <div class="img img1">
+                    <img src="/images/activeImages/introduce_프로필.jpg" alt="">
+                </div>
+                <p class="p1">
+                    1980년에 탄생한 중앙 동아리로 한울관에 위치해있으며, 
+                    어쿠스틱 장르의 밴드입니다<br>
+                    원하는 곡을 원하는 구성으로 원하는 사람들과 함께할 수 있습니다
+                    또한, 포지션이 정해지지 않은 ' 유동적이고 자유로운 ' 파트 분배로
+                    노래, 통기타, 피아노, 일렉, 베이스, 스트링, 타악기 등 담당하는 방식으로 진행됩니다
+                    악기 연주와 노래의 주니어들을 위해 1:N 방식으로 티처와 함께 피드백과 교육이 진행됩니다
+                </p>
+            </div>
+            <div class="row row2">
+                <p class="p2">
+                    매년 정기공연과, 신입생 소발표회, 대동제, 핑크 캠퍼스, 옐로 캠퍼스, 광안리 버스킹에 참여해 공연을 합니다
+                    또한, 친목과 협동심 도모를 위해 동계 및 하계에 동아리 MT가 진행되며, 그 외에도 공연 전후의 모임등이 진행됩니다
+                </p>
+                <div class="img img2">
+                    <img src="/images/activeImages/introduce_버스킹.jpg" alt="">
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="img img3">
+                    <img src="/images/activeImages/introduce_동아리방.jpg" alt="">
+                </div>
+                <p class="p3">
+                    신입생 모집은 연초에 한 번 에브리타임, 인스타그램에서 모집을 진행합니다 <br>
+                    자유로운 구성에 맞춰서 필요한 악기들은 언제든 추가될 수 있습니다
+                    주로 통기타, 일렉, 베이스, 피아노, 신디사이저, 카혼, 심벌, 차임, 쉐이커가 사용되며 캐스터네츠, 탬버린, 트라이앵글, 멜로디언 등의 소악기도 준비돼 있습니다
+                </p>
+            </div>
+
+            <footer>
+                <a href="#">TOP</a>
+            </footer>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const contentHolderHeight = document.querySelector(".content-holder").offsetHeight;
+            const imgHolderHeight = window.innerHeight;
+            const additionalScrollHeight = window.innerHeight;
+
+            const totalBodyHeight = contentHolderHeight + imgHolderHeight + additionalScrollHeight;
+            document.body.style.height = `${totalBodyHeight}px`;
+        });
+
+        ScrollTrigger.create({
+            trigger: ".website-content",
+            start: "-0.1% top",
+            end: "bottom bottom",
+            onEnter: () => {
+                gsap.set(".website-content",{ position: 'absolute', top: '195%'});
+            },
+            onLeaveBack: () => {
+                gsap.set(".website-content",{ position: 'fixed', top: '0'});
+            }
+        })
+
+        gsap.to(".header .letters:first-child", {
+            x: () => -innerWidth * 3,
+            scale: 10,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                start: "top top",
+                end: `+=200%`,
+                scrub: 1
+            }
+        });
+
+        gsap.to(".header .letters:last-child", {
+            x: () => innerWidth * 3.5,
+            scale: 10,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                start: "top top",
+                end: `+=200%`,
+                scrub: 1
+            }
+        });
+
+        gsap.to(".img-holder", {
+            rotation: 0,
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: "power2.inOut",
+            scrollTrigger: {
+                start: "top top",
+                end: `+=200%`,
+                scrub: 1
+            }
+        });
+
+        gsap.to(".img-holder img", {
+            scale: 1,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                start: "top top",
+                end: `+=200%`,
+                scrub: 1
+            }
+        });
+
+        gsap.to(".content-holder .img1", {
+            scale: 1.1,
+            y:-150,
+            ease: "power2.in",
+            scrollTrigger: {
+                trigger: ".about",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(".content-holder .p1", {
+            scale: 1.1,
+            y:-150,
+            ease: "power2.in",
+            scrollTrigger: {
+                trigger: ".about",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(".content-holder .img2", {
+            scale: 1.1,
+            y:-150,
+            ease: "power2.in",
+            scrollTrigger: {
+                trigger: ".img1",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(".content-holder .p2", {
+            scale: 1.1,
+            y:-150,
+            ease: "power2.in",
+            scrollTrigger: {
+                trigger: ".p1",
+                scrub: 1,
+            }
+        });
+
+
+        gsap.to(".content-holder .img3", {
+            scale: 1.1,
+            y:-150,
+            ease: "power2.in",
+            scrollTrigger: {
+                trigger: ".img2",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(".content-holder .p3", {
+            scale: 1.1,
+            y:-150,
+            ease: "power2.in",
+            scrollTrigger: {
+                trigger: ".p2",
+                scrub: 1,
+            }
+        });
+    </script>
+</body>
+</html>

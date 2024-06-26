@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/YooJeong/AppData/Local/Temp/fb000c66-3981-4d0c-bb34-5c9ef1b1b0af_2022CG202010991황유정.zip.0af",
+      "program": "c:/Users/YooJeong/AppData/Local/Temp/fb000c66-3981-4d0c-bb34-5c9ef1b1b0af_2022CG202010991황유정.zip.0af/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

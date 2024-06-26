@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+nav {
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    color: #000000;
+    z-index: 3;
+}
+
+nav > p {
+    word-spacing: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.text {
+    color: #000000;
+    margin-bottom: 100px;
+}
+
+header {
+    font-size: 120px;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 5px;
+}
+
+.text > p {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.container {
+    margin: 8%;
+
+}
+
+#app {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 24px;
+    gap: 24px;
+}
+
+#app > button {
+    background: url(/images/icons/noun-send-6703391.png) no-repeat 50% 50%;
+    background-size: 20%;
+}
+
+  
+.note {
+    height: 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 15px;
+    resize: none;
+    font-family: 'HakgyoansimMulgyeolR';
+    font-size: 20px;
+}
+
+textarea {
+    color: white;
+    background-color: #131313;
+    box-shadow: 10px 5px 20px rgba(57, 57, 57, 0.801);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+
+    overflow: hidden;
+}
+
+textarea::placeholder {
+    color:rgba(255, 255, 255, 0.332);
+    opacity: 1;
+}
+
+.add-note {
+    height: 200px;
+    border-style: dashed;
+    border-color: #000000;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+  
+.add-note:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
